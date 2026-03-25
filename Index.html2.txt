@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miguel Elgueta | Servicio Técnico</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 28px 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      margin-bottom: 24px;
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 2.2rem;
+    }
+
+    .hero p {
+      margin: 0 auto 18px;
+      max-width: 680px;
+      color: #4b5563;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    .btn-facebook {
+      background: #1877f2;
+      color: white;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 0 0 10px;
+      font-size: 1.8rem;
+    }
+
+    .section-text {
+      text-align: center;
+      color: #4b5563;
+      line-height: 1.6;
+      margin: 0 auto 22px;
+      max-width: 700px;
+    }
+
+    .fb-box {
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+      padding-bottom: 6px;
+    }
+
+    iframe {
+      border: none;
+      overflow: hidden;
+      max-width: 100%;
+      background: white;
+      border-radius: 12px;
+    }
+
+    .footer {
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="card hero">
+      <h1>Miguel Elgueta</h1>
+      <p>
+        Servicio técnico, mantención y atención directa por WhatsApp.
+        Revisa esta publicación específica de Facebook y lee los comentarios de clientes.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-whatsapp" href="https://wa.me/569953111680" target="_blank">
+          Escribir por WhatsApp
+        </a>
+        <a class="btn btn-facebook" href="https://www.facebook.com/tecnicomiguelelgueta" target="_blank">
+          Ver Facebook
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Opiniones y comentarios</h2>
+      <p class="section-text">
+        Aquí puedes ver únicamente esta publicación y sus comentarios directamente desde Facebook.
+      </p>
+
+      <div class="fb-box">
+        <iframe
+          src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftecnicomiguelelgueta%2Fposts%2Fpfbid0fZ3v6x4ThQj1tYQ24GkTH21TZx8iRmuXaGRgezSsTDAfFD4JdqeUNJkmDffrwp7pl&show_text=true&width=500"
+          width="500"
+          height="720"
+          style="border:none;overflow:hidden"
+          scrolling="no"
+          frameborder="0"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="footer">
+      Atención directa por WhatsApp: +56 9 9531 11680
+    </div>
+
+  </div>
+</body>
+</html>
