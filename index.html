@@ -7,96 +7,61 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
     * { box-sizing: border-box; }
 
-    :root {
-      --bg-1: #eef4ff;
-      --bg-2: #f8fbff;
-      --card: rgba(255, 255, 255, 0.9);
-      --text: #142033;
-      --muted: #5f6f86;
-      --line: rgba(20, 32, 51, 0.08);
-      --shadow: 0 18px 50px rgba(27, 52, 94, 0.12);
-      --blue: #2463eb;
-      --blue-dark: #1847ad;
-      --green: #22c55e;
-      --green-dark: #18a34a;
-    }
-
     body {
       margin: 0;
-      font-family: 'Inter', Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, #dbeafe 0%, transparent 30%),
-        radial-gradient(circle at top right, #e0f2fe 0%, transparent 25%),
-        linear-gradient(180deg, var(--bg-1), var(--bg-2));
-      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #eef4ff, #f8fbff);
+      color: #1a1a1a;
     }
 
     .wrap {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 22px 14px 40px;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px 14px 30px;
     }
 
-    .hero, .section {
-      background: var(--card);
-      border-radius: 26px;
-      box-shadow: var(--shadow);
-      padding: 30px 20px;
-      margin-bottom: 22px;
-    }
-
-    .hero { text-align: center; }
-
-    .badge {
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(36, 99, 235, 0.1);
-      color: var(--blue-dark);
-      font-size: 0.9rem;
-      font-weight: 700;
-      margin-bottom: 14px;
+    .box {
+      background: white;
+      border-radius: 20px;
+      padding: 28px 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: center;
     }
 
     h1 {
       margin: 0;
-      font-size: 2.1rem;
+      font-size: 2rem;
       font-weight: 800;
     }
 
-    .hero p {
-      margin: 14px auto 0;
-      max-width: 680px;
-      color: var(--muted);
+    p {
+      margin: 12px auto 0;
+      color: #555;
       line-height: 1.6;
     }
 
     .buttons {
+      margin-top: 22px;
       display: flex;
-      gap: 12px;
+      gap: 10px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-top: 22px;
     }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 54px;
-      padding: 0 22px;
-      border-radius: 16px;
+      padding: 14px 18px;
+      border-radius: 14px;
       text-decoration: none;
-      font-weight: 700;
-      transition: 0.15s;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+      font-weight: 600;
       color: white;
+      min-width: 160px;
+      text-align: center;
+      transition: 0.15s;
     }
 
     .btn:hover {
@@ -104,71 +69,25 @@
       opacity: 0.95;
     }
 
-    .btn-whatsapp {
-      background: linear-gradient(180deg, var(--green), var(--green-dark));
+    .wsp { background: #25D366; }
+    .fb { background: #1877f2; }
+    .ig {
+      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
     }
 
-    .btn-facebook {
-      background: linear-gradient(180deg, var(--blue), var(--blue-dark));
-    }
-
-    .btn-instagram {
-      background: linear-gradient(180deg, #f58529, #dd2a7b, #8134af);
-    }
-
-    .info-strip {
-      margin-top: 18px;
-      padding: 10px 14px;
-      border-radius: 12px;
-      background: #ffffff;
-      border: 1px solid var(--line);
-      font-size: 0.95rem;
-      color: var(--muted);
-      font-weight: 600;
-      display: inline-block;
-    }
-
-    .section h2 {
-      text-align: center;
-      margin: 0;
-      font-size: 1.5rem;
-      font-weight: 800;
-    }
-
-    .section p {
-      text-align: center;
-      color: var(--muted);
-      margin-top: 10px;
-      line-height: 1.6;
-    }
-
-    .embed-shell {
-      margin-top: 20px;
-      padding: 14px;
-      border-radius: 18px;
-      background: #f7faff;
-      border: 1px solid var(--line);
+    .embed {
+      margin-top: 22px;
       overflow-x: auto;
-    }
-
-    .embed-wrap {
-      display: flex;
-      justify-content: center;
     }
 
     iframe {
       border: none;
       border-radius: 12px;
+      display: block;
+      margin: auto;
     }
 
-    .footer {
-      text-align: center;
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 700px) {
+    @media (max-width: 600px) {
       .buttons {
         flex-direction: column;
       }
@@ -182,55 +101,38 @@
 <body>
 
 <div class="wrap">
-
-  <section class="hero">
-    <div class="badge">Servicio técnico y atención directa</div>
+  <div class="box">
 
     <h1>Miguel Elgueta<br>Computación e Informática</h1>
 
     <p>
-      Soporte, mantención y soluciones para computadores.
-      Revisa opiniones reales de clientes y contáctame directamente.
+      Soporte, mantención y reparación de computadores.<br>
+      Revisa opiniones reales y contáctame directamente.
     </p>
 
     <div class="buttons">
-      <a class="btn btn-whatsapp" href="https://wa.me/569953111680" target="_blank">
-        Contactar por WhatsApp
+      <a class="btn wsp" href="https://wa.me/569953111680" target="_blank">
+        WhatsApp
       </a>
 
-      <a class="btn btn-facebook" href="https://www.facebook.com/tecnicomiguelelgueta" target="_blank">
-        Ver opiniones en Facebook
+      <a class="btn fb" href="https://www.facebook.com/tecnicomiguelelgueta" target="_blank">
+        Facebook
       </a>
 
-      <a class="btn btn-instagram" href="https://instagram.com/_tecnico_miguel" target="_blank">
-        Ver trabajos en Instagram
+      <a class="btn ig" href="https://instagram.com/_tecnico_miguel" target="_blank">
+        Instagram
       </a>
     </div>
 
-    <div class="info-strip">
-      WhatsApp: +56 9 9531 11680
+    <div class="embed">
+      <iframe
+        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftecnicomiguelelgueta%2Fposts%2Fpfbid0fZ3v6x4ThQj1tYQ24GkTH21TZx8iRmuXaGRgezSsTDAfFD4JdqeUNJkmDffrwp7pl&show_text=true&width=500"
+        width="500"
+        height="720">
+      </iframe>
     </div>
-  </section>
 
-  <section class="section">
-    <h2>Opiniones y comentarios</h2>
-    <p>Publicación real con comentarios de clientes</p>
-
-    <div class="embed-shell">
-      <div class="embed-wrap">
-        <iframe
-          src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftecnicomiguelelgueta%2Fposts%2Fpfbid0fZ3v6x4ThQj1tYQ24GkTH21TZx8iRmuXaGRgezSsTDAfFD4JdqeUNJkmDffrwp7pl&show_text=true&width=500"
-          width="500"
-          height="720">
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-  <div class="footer">
-    Miguel Elgueta Computación e Informática
   </div>
-
 </div>
 
 </body>
