@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miguel Elgueta Computación e Informática</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-1: #eef4ff;
+      --bg-2: #f8fbff;
+      --card: rgba(255, 255, 255, 0.88);
+      --text: #142033;
+      --muted: #5f6f86;
+      --line: rgba(20, 32, 51, 0.08);
+      --shadow: 0 18px 50px rgba(27, 52, 94, 0.12);
+      --blue: #2463eb;
+      --blue-dark: #1847ad;
+      --green: #22c55e;
+      --green-dark: #18a34a;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #dbeafe 0%, transparent 30%),
+        radial-gradient(circle at top right, #e0f2fe 0%, transparent 25%),
+        linear-gradient(180deg, var(--bg-1), var(--bg-2));
+      min-height: 100vh;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 22px 14px 40px;
+    }
+
+    .hero,
+    .section {
+      background: var(--card);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.55);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: 34px 22px 28px;
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(36, 99, 235, 0.10);
+      color: var(--blue-dark);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 16px auto 0;
+      font-size: 1.02rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 22px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.98;
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(180deg, var(--green), var(--green-dark));
+      color: white;
+    }
+
+    .btn-facebook {
+      background: linear-gradient(180deg, var(--blue), var(--blue-dark));
+      color: white;
+    }
+
+    .info-strip {
+      margin-top: 22px;
+      display: inline-block;
+      padding: 11px 16px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.96rem;
+    }
+
+    .section {
+      padding: 28px 18px 24px;
+    }
+
+    .section h2 {
+      margin: 0;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .section p {
+      margin: 12px auto 0;
+      max-width: 700px;
+      text-align: center;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .embed-shell {
+      margin-top: 24px;
+      padding: 16px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(242,247,255,0.95));
+      border: 1px solid var(--line);
+      overflow-x: auto;
+    }
+
+    .embed-wrap {
+      display: flex;
+      justify-content: center;
+      min-width: 100%;
+    }
+
+    iframe {
+      border: none;
+      overflow: hidden;
+      background: white;
+      border-radius: 16px;
+      max-width: 100%;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 700px) {
+      .wrap {
+        padding: 14px 10px 28px;
+      }
+
+      .hero {
+        padding: 28px 16px 22px;
+        border-radius: 22px;
+      }
+
+      .section {
+        padding: 24px 12px 20px;
+        border-radius: 22px;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      .hero p,
+      .section p {
+        font-size: 0.98rem;
+      }
+
+      .buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 100%;
+        min-height: 56px;
+        border-radius: 18px;
+        font-size: 1rem;
+      }
+
+      .embed-shell {
+        padding: 10px;
+        border-radius: 18px;
+      }
+
+      iframe {
+        width: 500px;
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <section class="hero">
+      <div class="badge">Servicio técnico y atención directa</div>
+
+      <h1>Miguel Elgueta<br>Computación e Informática</h1>
+
+      <p>
+        Soporte, mantenimiento y soluciones para computadores. Aquí puedes ver una publicación
+        específica de Facebook con opiniones y comentarios reales de clientes, además de contactarme
+        directamente por WhatsApp.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-whatsapp" href="https://wa.me/569953111680" target="_blank">
+          Escribir por WhatsApp
+        </a>
+
+        <a class="btn btn-facebook" href="https://www.facebook.com/tecnicomiguelelgueta" target="_blank">
+          Ver Facebook
+        </a>
+      </div>
+
+      <div class="info-strip">
+        Atención directa • WhatsApp: +56 9 9531 11680
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Opiniones y comentarios</h2>
+      <p>
+        Esta sección muestra solo esta publicación de Facebook para que se puedan leer
+        los comentarios directamente desde aquí.
+      </p>
+
+      <div class="embed-shell">
+        <div class="embed-wrap">
+          <iframe
+            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftecnicomiguelelgueta%2Fposts%2Fpfbid0fZ3v6x4ThQj1tYQ24GkTH21TZx8iRmuXaGRgezSsTDAfFD4JdqeUNJkmDffrwp7pl&show_text=true&width=500"
+            width="500"
+            height="720"
+            style="border:none;overflow:hidden"
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      Miguel Elgueta Computación e Informática
+    </div>
+
+  </div>
+</body>
+</html>
